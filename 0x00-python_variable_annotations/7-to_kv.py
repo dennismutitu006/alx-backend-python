@@ -9,6 +9,6 @@ First element of the tuple is a str second a float.
 from typing import Union, Tuple
 
 
-def to_kv(k: str, v: Union[int, float]) -> Tuple[float, int]:
+def to_kv(k: str, v: Union[int, float]) -> Tuple[int, float]:
     """The func will return a str and the square of v"""
     return (k, float(v ** 2))
