@@ -5,10 +5,10 @@ this function is a couritne that takes no arguments.
 
 import asyncio
 import random
-from typing import AsyncGenerator
+from typing import Generator
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
+async def async_generator() -> Generator[float, None, None]:
     '''
     The coroutine will loop 10times each time async wait 1sec
     then yeild a random number between 0 - 10.
