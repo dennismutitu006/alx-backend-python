@@ -1,0 +1,430 @@
+geeksforgeeks
+TutorialsDSAData ScienceWeb TechCourses
+
+
+DSA
+Interview Problems on DP
+Practice DP
+MCQs on DP
+Tutorial on Dynamic Programming
+Optimal Substructure
+Overlapping Subproblem
+Memoization
+Tabulation
+Tabulation vs Memoization
+0/1 Knapsack
+Unbounded Knapsack
+Subset Sum
+LCS
+LIS
+Coin Change
+Word Break
+Egg Dropping Puzzle
+Matrix Chain Multiplication
+Palindrome Partitioning
+DP on Arrays
+DP with Bitmasking
+Digit DP
+DP on Trees
+DP on Graph
+Dynamic Programming or DP
+Last Updated : 02 May, 2024
+Dynamic Programming is a method used in mathematics and computer science to solve complex problems by breaking them down into simpler subproblems. By solving each subproblem only once and storing the results, it avoids redundant computations, leading to more efficient solutions for a wide range of problems. This article provides a detailed exploration of dynamic programming concepts, illustrated with examples.
+
+dynamic-programming
+Dynamic Programming
+
+Table of Content
+
+What is Dynamic Programming ?
+How Does Dynamic Programming Work?
+Examples of Dynamic Programming
+When to Use Dynamic Programming?
+Approaches of Dynamic Programming
+Dynamic Programming Algorithm
+Advantages of Dynamic Programming
+Applications of Dynamic Programming
+Learn Basic of Dynamic Programming
+Advanced Concepts in Dynamic Programming
+Dynamic Programming Problems
+What is Dynamic Programming (DP)?
+Dynamic Programming (DP) is a method used in mathematics and computer science to solve complex problems by breaking them down into simpler subproblems. By solving each subproblem only once and storing the results, it avoids redundant computations, leading to more efficient solutions for a wide range of problems.
+
+How Does Dynamic Programming (DP) Work?
+Identify Subproblems: Divide the main problem into smaller, independent subproblems.
+Store Solutions: Solve each subproblem and store the solution in a table or array.
+Build Up Solutions: Use the stored solutions to build up the solution to the main problem.
+Avoid Redundancy: By storing solutions, DP ensures that each subproblem is solved only once, reducing computation time.
+Examples of Dynamic Programming (DP)
+Example 1: Consider the problem of finding the Fibonacci sequence:
+
+Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, …
+
+Brute Force Approach:
+
+To find the nth Fibonacci number using a brute force approach, you would simply add the (n-1)th and (n-2)th Fibonacci numbers. This would work, but it would be inefficient for large values of n, as it would require calculating all the previous Fibonacci numbers.
+
+Dynamic Programming Approach:
+
+
+
+
+
+
+
+Fibonacci Series using Dynamic Programming
+
+
+Subproblems: F(0), F(1), F(2), F(3), …
+Store Solutions: Create a table to store the values of F(n) as they are calculated.
+Build Up Solutions: For F(n), look up F(n-1) and F(n-2) in the table and add them.
+Avoid Redundancy: The table ensures that each subproblem (e.g., F(2)) is solved only once.
+By using DP, we can efficiently calculate the Fibonacci sequence without having to recompute subproblems.
+
+Example 2: Longest common subsequence (finding the longest subsequence that is common to two strings)
+
+Example 3: Shortest path in a graph (finding the shortest path between two nodes in a graph)
+
+Example 4: Knapsack problem (finding the maximum value of items that can be placed in a knapsack with a given capacity)
+
+When to Use Dynamic Programming (DP)?
+Dynamic programming is an optimization technique used when solving problems that consists of the following characteristics:
+
+1. Optimal Substructure:
+Optimal substructure means that we combine the optimal results of subproblems to achieve the optimal result of the bigger problem.
+
+Example:
+
+Consider the problem of finding the minimum cost path in a weighted graph from a source node to a destination node. We can break this problem down into smaller subproblems:
+
+Find the minimum cost path from the source node to each intermediate node.
+Find the minimum cost path from each intermediate node to the destination node.
+The solution to the larger problem (finding the minimum cost path from the source node to the destination node) can be constructed from the solutions to these smaller subproblems.
+
+2. Overlapping Subproblems:
+The same subproblems are solved repeatedly in different parts of the problem.
+
+Example:
+
+Consider the problem of computing the Fibonacci series. To compute the Fibonacci number at index n, we need to compute the Fibonacci numbers at indices n-1 and n-2. This means that the subproblem of computing the Fibonacci number at index n-1 is used twice in the solution to the larger problem of computing the Fibonacci number at index n.
+
+Approaches of Dynamic Programming (DP)
+Dynamic programming can be achieved using two approaches:
+
+1. Top-Down Approach (Memoization):
+In the top-down approach, also known as memoization, we start with the final solution and recursively break it down into smaller subproblems. To avoid redundant calculations, we store the results of solved subproblems in a memoization table.
+
+Let’s breakdown Top down approach:
+
+Starts with the final solution and recursively breaks it down into smaller subproblems.
+Stores the solutions to subproblems in a table to avoid redundant calculations.
+Suitable when the number of subproblems is large and many of them are reused.
+2. Bottom-Up Approach (Tabulation):
+In the bottom-up approach, also known as tabulation, we start with the smallest subproblems and gradually build up to the final solution. We store the results of solved subproblems in a table to avoid redundant calculations.
+
+Let’s breakdown Bottom-up approach:
+
+Starts with the smallest subproblems and gradually builds up to the final solution.
+Fills a table with solutions to subproblems in a bottom-up manner.
+Suitable when the number of subproblems is small and the optimal solution can be directly computed from the solutions to smaller subproblems.
+Dynamic Programming (DP) Algorithm
+Dynamic programming is a algorithmic technique that solves complex problems by breaking them down into smaller subproblems and storing their solutions for future use. It is particularly effective for problems that contains overlapping subproblems and optimal substructure.
+
+Common Algorithms that Use Dynamic Programming:
+Longest Common Subsequence (LCS): Finds the longest common subsequence between two strings.
+Shortest Path in a Graph: Finds the shortest path between two nodes in a graph.
+Knapsack Problem: Determines the maximum value of items that can be placed in a knapsack with a given capacity.
+Matrix Chain Multiplication: Optimizes the order of matrix multiplication to minimize the number of operations.
+Fibonacci Sequence: Calculates the nth Fibonacci number.
+Advantages of Dynamic Programming (DP)
+Dynamic programming has a wide range of advantages, including:
+
+Avoids recomputing the same subproblems multiple times, leading to significant time savings.
+Ensures that the optimal solution is found by considering all possible combinations.
+Breaks down complex problems into smaller, more manageable subproblems.
+Applications of Dynamic Programming (DP)
+Dynamic programming has a wide range of applications, including:
+
+Optimization: Knapsack problem, shortest path problem, maximum subarray problem
+Computer Science: Longest common subsequence, edit distance, string matching
+Operations Research: Inventory management, scheduling, resource allocation
+Now, let’s explore a comprehensive roadmap to mastering Dynamic Programming.
+
+Learn Basic of Dynamic Programming (DP)
+Introduction to Dynamic Programming – Data Structures and Algorithm Tutorials
+What is memoization? A Complete tutorial
+Tabulation vs Memoizatation
+Optimal Substructure Property
+Overlapping Subproblems Property
+How to solve a Dynamic Programming Problem ?
+Advanced Concepts in Dynamic Programming (DP)
+Bitmasking and Dynamic Programming | Set 1
+Bitmasking and Dynamic Programming | Set-2 (TSP)
+Digit DP | Introduction
+Sum over Subsets | Dynamic Programming
+Dynamic Programming (DP) Problems
+We have classified standard dynamic programming (DP) problems into three categories: Easy, Medium, and Hard.
+
+1. Easy Problems on Dynamic Programming (DP)
+Fibonacci numbers
+nth Catalan Number
+Bell Numbers (Number of ways to Partition a Set)
+Binomial Coefficient
+Coin change problem
+Subset Sum Problem
+Compute nCr % p
+Cutting a Rod
+Painting Fence Algorithm
+Longest Common Subsequence
+Longest Increasing Subsequence
+Longest subsequence such that difference between adjacents is one
+Maximum size square sub-matrix with all 1s
+Min Cost Path
+Minimum number of jumps to reach end
+Longest Common Substring (Space optimized DP solution)
+Count ways to reach the nth stair using step 1, 2 or 3
+Count all possible paths from top left to bottom right of a mXn matrix
+Unique paths in a Grid with Obstacles
+2. Medium Problems on Dynamic Programming (DP)
+Floyd Warshall Algorithm
+Bellman–Ford Algorithm
+0-1 Knapsack Problem
+Printing Items in 0/1 Knapsack
+Unbounded Knapsack (Repetition of items allowed)
+Egg Dropping Puzzle
+Word Break Problem
+Vertex Cover Problem
+Tile Stacking Problem
+Box-Stacking Problem
+Partition Problem
+Travelling Salesman Problem | Set 1 (Naive and Dynamic Programming)
+Longest Palindromic Subsequence
+Longest Common Increasing Subsequence (LCS + LIS)
+Find all distinct subset (or subsequence) sums of an array
+Weighted job scheduling
+Count Derangements (Permutation such that no element appears in its original position)
+Minimum insertions to form a palindrome
+Wildcard Pattern Matching
+Ways to arrange Balls such that adjacent balls are of different types
+3. Hard Problems on Dynamic Programming (DP)
+Palindrome Partitioning
+Word Wrap Problem
+The painter’s partition problem
+Program for Bridge and Torch problem
+Matrix Chain Multiplication
+Printing brackets in Matrix Chain Multiplication Problem
+Maximum sum rectangle in a 2D matrix
+Maximum profit by buying and selling a share at most k times
+Minimum cost to sort strings using reversal operations of different costs
+Count of AP (Arithmetic Progression) Subsequences in an array
+Introduction to Dynamic Programming on Trees
+Maximum height of Tree when any Node can be considered as Root
+Longest repeating and non-overlapping substring
+Quick Links:
+
+Learn Data Structure and Algorithms | DSA Tutorial
+Top 20 Dynamic Programming Interview Questions
+‘Practice Problems’ on Dynamic Programming
+‘Quiz’ on Dynamic Programming
+
+"The DSA course helped me a lot in clearing the interview rounds. It was really very helpful in setting a strong foundation for my problem-solving skills. Really a great investment, the passion Sandeep sir has towards DSA/teaching is what made the huge difference." - Gaurav | Placed at Amazon
+
+Before you move on to the world of development, master the fundamentals of DSA on which every advanced algorithm is built upon. Choose your preferred language and start learning today: 
+
+DSA In JAVA/C++
+DSA In Python
+DSA In JavaScript
+Trusted by Millions, Taught by One- Join the best DSA Course Today!
+
+
+H
+
+harendrakumar123
+
+27
+Previous Article
+Greedy Algorithms
+Next Article
+What is Pattern Searching ?
+Similar Reads
+Dynamic Programming in Game Theory for Competitive Programming
+In the fast-paced world of competitive programming, mastering dynamic programming in game theory is the key to solving complex strategic challenges. This article explores how dynamic programming in game theory can enhance your problem-solving skills and strategic insights, giving you a competitive edge. Whether you're a seasoned coder or a newcomer
+15+ min read
+Overlapping Subproblems Property in Dynamic Programming | DP-1
+Dynamic Programming is an algorithmic paradigm that solves a given complex problem by breaking it into subproblems using recursion and storing the results of subproblems to avoid computing the same results again. Following are the two main properties of a problem that suggests that the given problem can be solved using Dynamic programming. Overlapp
+10 min read
+Introduction to Dynamic Programming on Trees
+Dynamic Programming(DP) is a technique to solve problems by breaking them down into overlapping sub-problems which follows the optimal substructure. There are various problems using DP like subset sum, knapsack, coin change etc. DP can also be applied on trees to solve some specific problems.Pre-requisite: DFSGiven a tree with N nodes and N-1 edges
+10 min read
+Print equal sum sets of Array (Partition Problem) using Dynamic Programming
+Given an array arr[]. Determine whether it is possible to split the array into two sets such that the sum of elements in both sets is equal. If it is possible, then print both sets. If it is not possible then output -1. Examples : Input : arr = {5, 5, 1, 11} Output : Set 1 = {5, 5, 1}, Set 2 = {11} Sum of both the sets is 11 and equal. Input : arr
+13 min read
+Dynamic Programming vs Divide-and-Conquer
+In this article I’m trying to explain the difference/similarities between dynamic programming and divide and conquer approaches based on two examples: binary search and minimum edit distance (Levenshtein distance).The ProblemWhen I started to learn algorithms it was hard for me to understand the main idea of dynamic programming (DP) and how it is d
+12 min read
+View More Articles
+Article Tags :
+Algorithms
+DSA
+Dynamic Programming
+Practice Tags :
+Algorithms
+Dynamic Programming
+geeksforgeeks-footer-logo
+A-143, 9th Floor, Sovereign Corporate Tower, Sector-136, Noida, Uttar Pradesh - 201305
+GFG App on Play Store
+GFG App on App Store
+Company
+About Us
+Legal
+Careers
+In Media
+Contact Us
+Advertise with us
+GFG Corporate Solution
+Placement Training Program
+Explore
+Hack-A-Thons
+GfG Weekly Contest
+DSA in JAVA/C++
+Master System Design
+Master CP
+GeeksforGeeks Videos
+Geeks Community
+Languages
+Python
+Java
+C++
+PHP
+GoLang
+SQL
+R Language
+Android Tutorial
+Tutorials Archive
+DSA
+Data Structures
+Algorithms
+DSA for Beginners
+Basic DSA Problems
+DSA Roadmap
+Top 100 DSA Interview Problems
+DSA Roadmap by Sandeep Jain
+All Cheat Sheets
+Data Science & ML
+Data Science With Python
+Data Science For Beginner
+Machine Learning Tutorial
+ML Maths
+Data Visualisation Tutorial
+Pandas Tutorial
+NumPy Tutorial
+NLP Tutorial
+Deep Learning Tutorial
+HTML & CSS
+HTML
+CSS
+Web Templates
+CSS Frameworks
+Bootstrap
+Tailwind CSS
+SASS
+LESS
+Web Design
+Python Tutorial
+Python Programming Examples
+Python Projects
+Python Tkinter
+Web Scraping
+OpenCV Tutorial
+Python Interview Question
+Django
+Computer Science
+Operating Systems
+Computer Network
+Database Management System
+Software Engineering
+Digital Logic Design
+Engineering Maths
+DevOps
+Git
+AWS
+Docker
+Kubernetes
+Azure
+GCP
+DevOps Roadmap
+Competitive Programming
+Top DS or Algo for CP
+Top 50 Tree
+Top 50 Graph
+Top 50 Array
+Top 50 String
+Top 50 DP
+Top 15 Websites for CP
+System Design
+High Level Design
+Low Level Design
+UML Diagrams
+Interview Guide
+Design Patterns
+OOAD
+System Design Bootcamp
+Interview Questions
+JavaScript
+JavaScript Examples
+TypeScript
+ReactJS
+NextJS
+AngularJS
+NodeJS
+Lodash
+Web Browser
+Preparation Corner
+Company-Wise Recruitment Process
+Resume Templates
+Aptitude Preparation
+Puzzles
+Company-Wise Preparation
+School Subjects
+Mathematics
+Physics
+Chemistry
+Biology
+Social Science
+English Grammar
+World GK
+Management & Finance
+Management
+HR Management
+Finance
+Organisational Behaviour
+Marketing
+Free Online Tools
+Typing Test
+Image Editor
+Code Formatters
+Code Converters
+Currency Converter
+Random Number Generator
+Random Password Generator
+More Tutorials
+Software Development
+Software Testing
+Product Management
+SEO - Search Engine Optimization
+Linux
+Excel
+All Cheatsheets
+GeeksforGeeks Videos
+DSA
+Python
+Java
+C++
+Web Development
+Data Science
+CS Subjects
+@GeeksforGeeks, Sanchhaya Education Private Limited, All rights reserved
+Lightbox
+
+
+
