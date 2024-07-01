@@ -47,7 +47,7 @@ class TestGetJson(unittest.TestCase):
             self.assertEqual(get_json(test_url), test_payload)
 
 
-class TestMemoize(unittest.Testcase):
+class TestMemoize(unittest.TestCase):
     '''parameterize and patch'''
     def test_memoize(self):
         '''define a class inside test_memoize'''
