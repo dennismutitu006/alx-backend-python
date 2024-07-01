@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 '''a test file for utils.access_nested_map in the utils.py module'''
 import unittest
-from utils import access_nested_map, get_json
+from utils import access_nested_map, get_json, memoize
 from parameterized import parameterized
 from unittest.mock import Mock, patch
 
